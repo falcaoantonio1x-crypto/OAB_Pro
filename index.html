@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAB Pro — Sistema Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <h1>OAB Pro</h1>
+            <nav>
+                <button class="tab active" data-tab="simulado">Simulado</button>
+                <button class="tab" data-tab="dashboard">Dashboard</button>
+                <button class="tab" data-tab="config">Dados</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section id="tab-simulado">
+            <div class="card">
+                <h3>Treino SRS (Repetição Espaçada)</h3>
+                <button id="btnIniciarSimulado" class="btn">Iniciar Sessão</button>
+            </div>
+            <div id="questaoContainer" class="hidden"></div>
+        </section>
+
+        <section id="tab-dashboard" class="hidden">
+            <div class="card">
+                <h3>Performance Geral</h3>
+                <div id="dashboardContent">Carregando dados...</div>
+            </div>
+        </section>
+
+        <section id="tab-config" class="hidden">
+            <div class="card">
+                <h3>Importar Banco de Questões (JSON)</h3>
+                <textarea id="taQuestões" placeholder='Coloque o JSON aqui...'></textarea>
+                <button id="btnImportar" class="btn">Importar</button>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
