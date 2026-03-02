@@ -1,0 +1,9 @@
+:root{--bg:#0b0f14;--card:#121926;--txt:#e7eef7;--accent:#5aa9ff;--line:#223148;--ok:#35c46b;--bad:#ff5a67;}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:system-ui,sans-serif;}
+.wrap{max-width:1000px;margin:0 auto;padding:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:20px;}
+.hidden{display:none;}
+.btn{background:var(--accent);color:white;border:none;padding:10px 15px;border-radius:6px;cursor:pointer;}
+textarea{width:100%;height:100px;background:var(--bg);color:var(--txt);border:1px solid var(--line);}
+.tab{background:transparent;color:var(--txt);border:1px solid var(--line);padding:8px 12px;border-radius:6px;cursor:pointer;}
+.tab.active{border-color:var(--accent);}
