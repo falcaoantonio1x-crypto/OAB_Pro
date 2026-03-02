@@ -1,13 +1,16 @@
-// app.js
 import { initDB, saveQuestions } from './db.js';
 
 document.getElementById('btnImportar').addEventListener('click', async () => {
-    const data = JSON.parse(document.getElementById('taQuestões').value);
-    await saveQuestions(data);
-    alert('Importado!');
+    try {
+        const data = JSON.parse(document.getElementById('taQuestões').value);
+        await saveQuestions(data);
+        alert('Questões importadas com sucesso!');
+    } catch (e) {
+        alert('Erro ao importar JSON: ' + e.message);
+    }
 });
 
-// Lógica de alternar tabs
+// Lógica de Tabs
 document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', (e) => {
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
