@@ -1,4 +1,3 @@
-// db.js
 const DB_NAME = 'OABProDB';
 const DB_VERSION = 1;
 
@@ -9,12 +8,8 @@ export function initDB() {
         request.onsuccess = (e) => resolve(e.target.result);
         request.onupgradeneeded = (e) => {
             const db = e.target.result;
-            if (!db.objectStoreNames.contains('questions')) {
-                db.createObjectStore('questions', { keyPath: 'id' });
-            }
-            if (!db.objectStoreNames.contains('srs')) {
-                db.createObjectStore('srs', { keyPath: 'id' });
-            }
+            if (!db.objectStoreNames.contains('questions')) db.createObjectStore('questions', { keyPath: 'id' });
+            if (!db.objectStoreNames.contains('srs')) db.createObjectStore('srs', { keyPath: 'id' });
         };
     });
 }
